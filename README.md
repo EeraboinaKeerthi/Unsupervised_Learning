@@ -134,5 +134,9 @@ Divisive (Top-Down)
 Start with one big cluster
 Recursively split clusters into smaller ones
 
+**T-SNE**
+
+t-SNE stands for "t-distributed stochastic neighbor embedding". 
+It maps samples from their high-dimensional space into a 2- or 3-dimensional space so they can visualized.
 
 
