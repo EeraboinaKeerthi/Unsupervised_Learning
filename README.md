@@ -94,6 +94,8 @@ Clusters may be formed based on one dominant feature.
 You get incorrect or misleading clusters.
 Metrics like silhouette score can be low even if K is chosen correctly.
 
+StandardScaler is an example of a "preprocessing" step. There are several of these available in scikit-learn, for example MaxAbsScaler and Normalizer.
+
 **Evaluating a Clustering:**
 
 A good clustering has tight clusters, meaning that the samples in each cluster are bunched together, not spread out.
