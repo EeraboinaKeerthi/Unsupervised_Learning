@@ -179,8 +179,46 @@ Dimension reduction with PCA:
 
 PCA performs dimension reduction by discarding the PCA features with lower variance, which it assumes to be noise, and retaining the higher variance PCA features, which it assumes to be informative.
 
+**How PCA Works:**
 
+Standardize the data (Mean = 0, Std. Dev = 1)
+Compute the covariance matrix
+Compute eigenvectors and eigenvalues. These determine the principal components
+Select top k principal components. Choose those that explain the most variance (using a scree plot or cumulative variance)
+Project the data
+Transform the original data onto the new lower-dimensional space
 
+**Why Use Dimensionality Reduction?**
+
+Reduce computational complexity
+Remove redundant or irrelevant features
+Help with visualization 
+
+**Example: Medical Diagnosis Using Patient Data**
+
+A hospital collects data from thousands of patients with the goal of identifying patterns that could help in diagnosing heart disease. Each patient’s record includes:
+Age, Blood pressure, Cholesterol level, Heart rate, ECG results, Number of previous hospital visits, BMI, Blood sugar level, Family history of heart disease, Exercise level, Medication adherence, Smoking status, Alcohol consumption
+Total: 20+ features per patient
+Problem:
+The dataset has high dimensionality.
+Many features may be correlated (e.g., cholesterol & blood pressure).
+Hard to visualize patterns in such a high-dimensional space.
+Machine learning models suffer from overfitting or slow training due to redundant features.
+
+Solution: Apply PCA
+Standardize the data
+Use PCA to reduce the 20+ features to 3 or 4 principal components that explain 90–95% of the variance.
+
+Use these components to:
+Feed into clustering algorithms to find patient risk groups
+Visualize patient health profiles in 2D or 3D
+Train faster and more accurate predictive models
+
+Outcome:
+After applying PCA:
+Component 1 captures general health risk (combining age, BP, cholesterol, etc.)
+Component 2 reflects lifestyle factors (exercise, smoking, alcohol)
+Component 3 includes genetic and medical history
 
 
 
