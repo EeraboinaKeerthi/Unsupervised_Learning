@@ -6,7 +6,7 @@ Ex: "clusters" of customers based on their purchase histories, or searching for 
 and using these patterns to express the data in a compressed form. 
 These are examples of unsupervised learning techniques called "clustering" and "dimension reduction".
 
-Clustering:
+**Clustering:**
 
 **K Means Clustering:**
 
@@ -138,5 +138,53 @@ Recursively split clusters into smaller ones
 
 t-SNE stands for "t-distributed stochastic neighbor embedding". 
 It maps samples from their high-dimensional space into a 2- or 3-dimensional space so they can visualized.
+
+**Dimensionality Reduction:**
+
+Dimension reduction finds patterns in data, and uses these patterns to re-express it in a compressed form. 
+This makes subsequent computation with the data much more efficient, and this can be a big deal in a world of big datasets. 
+However, the most important function of dimension reduction is to reduce a dataset to its "bare bones", discarding noisy features.
+
+**Principal Component Analysis:**
+
+PCA is most fundamental of dimension reduction techniques.
+PCA performs dimension reduction in two steps, 
+
+In the first step, PCA rotates the samples so that they are aligned with the coordinate axes. 
+In fact, it does more than this: PCA also shifts the samples so that they have mean zero.
+And, No information is lost - this is true no matter how many features the dataset has. 
+
+PCA, due to the rotation it performs, "de-correlates" the data, in the sense that the columns of the transformed array are not linearly correlated.
+
+Linear correlation can be measured with the **Pearson correlation**. 
+It takes values between -1 and 1, where larger values indicate a stronger correlation, and 0 indicates no linear correlation. 
+
+PCA is called "principal component analysis" because it learns the "principal components" of the data. 
+
+principal components = directions of variance = directions in which the samples vary the most.
+
+PCA aligns principal components with the coordinate axes.
+
+Intrinsic Dimension:
+
+The intrinsic dimension of a dataset is the number of features required to approximate it. 
+Essential idea behind dimension reduction
+The intrinsic dimension informs dimension reduction, because it tells us how much a dataset can be compressed.
+
+So how can the intrinsic dimension be identified, even if there are many features? 
+The intrinsic dimension can be identified by counting the PCA features that have high variance.
+The intrinsic dimension is the number of PCA features that have significant variance.
+
+Dimension reduction with PCA:
+
+PCA performs dimension reduction by discarding the PCA features with lower variance, which it assumes to be noise, and retaining the higher variance PCA features, which it assumes to be informative.
+
+
+
+
+
+
+
+
 
 
