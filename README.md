@@ -115,3 +115,24 @@ Range: -1 to 1
 0: overlapping clusters
 <0: possibly wrong cluster
 
+**Two unsupervised learning techniques for visualization: t-SNE and hierarchical clustering.**
+
+**Hierarchical clustering** 
+
+Hierarchical clustering is an unsupervised learning method that builds a hierarchy of clusters — like a tree (called a dendrogram). Unlike K-Means, you don’t need to specify the number of clusters (K) upfront.
+
+Types of Hierarchical Clustering:
+
+Agglomerative (Bottom-Up)
+
+Start with each point as its own cluster
+Merge the closest clusters step-by-step
+Stop when everything is merged or a threshold is reached
+
+Divisive (Top-Down)
+
+Start with one big cluster
+Recursively split clusters into smaller ones
+
+
+
