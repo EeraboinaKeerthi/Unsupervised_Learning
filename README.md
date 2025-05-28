@@ -1,3 +1,5 @@
+**Unsupervised learning**
+
 Unsupervised learning finds patterns in data.
 
 Ex: "clusters" of customers based on their purchase histories, or searching for patterns and correlations among these purchases, 
@@ -6,7 +8,7 @@ These are examples of unsupervised learning techniques called "clustering" and "
 
 Clustering:
 
-K Means Clustering:
+**K Means Clustering:**
 
 K-Means is an unsupervised machine learning algorithm used for clustering data into K distinct groups (clusters) based on feature similarity. 
 It minimizes the distance between points within a cluster and maximizes the distance between clusters.
@@ -68,6 +70,22 @@ Push discounts to Cluster 0
 Upsell premium items to Cluster 1
 Send loyalty rewards to Cluster 2
 
+**Evaluating a Clustering:**
 
+A good clustering has tight clusters, meaning that the samples in each cluster are bunched together, not spread out.
 
+1. Inertia measures clustering quality: 
+How spread out the samples within each cluster are can be measured by the "inertia". Intuitively, inertia measures how far samples are from their centroids.
+We want clusters that are not spread out, so lower values of the inertia are better.
+A good clustering has tight clusters (meaning low inertia). But it also doesn't have too many clusters. 
+
+A good rule of thumb is to choose an elbow in the inertia plot, that is, a point where the inertia begins to decrease more slowly. 
+
+2. Silhouette Score
+
+Measures how similar a point is to its own cluster vs other clusters.
+Range: -1 to 1
+1: well clustered
+0: overlapping clusters
+<0: possibly wrong cluster
 
