@@ -70,6 +70,30 @@ Push discounts to Cluster 0
 Upsell premium items to Cluster 1
 Send loyalty rewards to Cluster 2
 
+**Transforming features for better clusterings / Standardization/ Normalization**
+
+Clustering algorithms like K-Means rely on Euclidean distance to assign points to clusters. 
+If your features are on different scales, one feature might dominate the distance calculation.
+Example:
+Feature	            Range
+Age	                18–70
+Annual Income	  $10,000–$100,000
+
+Without scaling, income will have a much larger effect on distance than age, simply because of its numeric range.
+
+Why Standardization Helps:
+Standardization transforms data so that each feature:
+Has a mean of 0
+Has a standard deviation of 1
+
+This ensures all features contribute equally to the clustering process.
+
+What Happens Without Standardization?
+
+Clusters may be formed based on one dominant feature.
+You get incorrect or misleading clusters.
+Metrics like silhouette score can be low even if K is chosen correctly.
+
 **Evaluating a Clustering:**
 
 A good clustering has tight clusters, meaning that the samples in each cluster are bunched together, not spread out.
